@@ -39,7 +39,7 @@ body * {
 
 /* lien menu commander */
 
-#menu-item-63 {
+.menu-commander {
    font-weight: 700;
    background-color: var(--main-color);
    padding-left: 40px;
@@ -47,15 +47,15 @@ body * {
    margin-left: 20px;
 }
 
-#menu-item-63 a {
-   color: white;
+.menu-commander a {
+   color: white !important;
 }
 
-#menu-item-63 a:hover {
+.menu-commander a:hover {
    font-size: 16px;
 }
 
-#menu-item-63:hover {
+.menu-commander:hover {
    background-color: var(--main-bg-color) ;
 }
 
@@ -94,9 +94,138 @@ body * {
    height: 90px;
 }
 
+.bloc-pensent {
+   justify-items: center;
+}
+
+.wp-block-media-text__media {
+   align-self: start !important;
+}
+
+
+
 /*
 .background-branch{
    background-image: url("http://localhost:81/Planty/wp-content/uploads/2023/07/branches.png")  ;
    background-repeat: no-repeat;
    background-position: center;
 } */
+
+/* MEDIA QUERIES */
+
+@media (min-width:839px) and (max-width:921px) {
+
+   h5, .entry-content h5 {
+      font-size: 46px;
+
+   }
+}
+
+@media (min-width:782px) and (max-width:838px) {
+
+   h5, .entry-content h5 {
+      font-size: 40px;
+
+   }
+}
+
+@media (min-width:545px) and (max-width:595px) {
+
+   h5, .entry-content h5 {
+      font-size: 30px;
+
+   }
+}
+
+/*
+@media (min-width:320px) and (max-width:404px) {
+
+   h5, .entry-content h5 {
+      font-size: 13px;
+
+   }
+}
+
+@media (min-width:320px) and (max-width:781px) {
+
+   h5, .entry-content h5 {
+      font-size: 13px;
+
+   }
+}*/
+
+@media (min-width: 1268px) {
+
+   .p-energie-plantes {
+      width: 30%;
+
+   }
+}
+
+@media (max-width: 1267px) {
+
+      .p-energie-plantes {
+         width: 80%;
+   
+      }
+}
+
+@media (max-width: 955px) {
+
+   .colonne-pensent h4 {
+      font-size: 22px !important;
+
+   }
+}
+
+
+
+
+
+/*
+@media (max-width: 838px) {
+
+   h5, .entry-content h5 {
+      font-size: 44px;
+
+   }
+}
+
+@media (max-width: 818px) {
+
+   h5, .entry-content h5 {
+      font-size: 40px;
+
+   }
+}
+
+@media (max-width: 781px) {
+
+   h5, .entry-content h5 {
+      font-size: 90px;
+
+   }
+}
+
+@media (max-width: 770px) {
+
+   h5, .entry-content h5 {
+      font-size: 89px;
+
+   }
+}
+
+@media (max-width: 762px) {
+
+   h5, .entry-content h5 {
+      font-size: 87px;
+
+   }
+}*/
+
+   /*
+   #ast-desktop-header{
+      display: none;
+   }
+*/
+
