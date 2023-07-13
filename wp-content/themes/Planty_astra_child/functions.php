@@ -6,6 +6,7 @@ function theme_enqueue_styles(){
     // Chargement du style.css du thème parent Astra
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
+    add_filter('wpcf7_autop_or_not', '__return_false');
 }
 
 
