@@ -12,6 +12,7 @@ body * {
    --main-bg-color: #C02E44;
    --second-color : #3B8E46;
    --border-color : #E3D9D0;
+   --color-button : #E0B9B4;
 }
 
 /* MAIN */
@@ -107,7 +108,7 @@ body * {
 
 
 .bloc-nous-rencontrer{
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fleur-nous-rencontrer.png);
+   background-image: url('../../..//uploads/2023/07/fleur-nous-rencontrer.png');
    background-repeat: no-repeat;
    background-position: 8% -60% ;
 
@@ -115,7 +116,7 @@ body * {
 
 .bloc-equipe{
    max-width: 1440px !important;
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/branche_nous_rencontrer.png);
+   background-image: url('../../../uploads/2023/07/branche_nous_rencontrer.png');
    background-repeat: no-repeat;
    background-position: bottom right 2% ;
 
@@ -131,7 +132,7 @@ body * {
 
 .div-formulaire{
    max-width: 550px !important;
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fleur2.png);
+   background-image: url('../../../uploads/2023/07/fleur2.png');
    background-repeat: no-repeat;
    background-position: bottom left  ;
 
@@ -163,38 +164,57 @@ body * {
 
 /* Page Commander */
 
-/* Permet de supprimer les deux fleches a l'interieur du champs input */
+/* Partie 1 */
+
+/* Permet de supprimer les deux fleches a l'interieur du champs input avec Chrome et Edge*/
 .bloc-quantity input[type=number]::-webkit-inner-spin-button,
 .bloc-quantity input[type=number]::-webkit-outer-spin-button{
    -webkit-appearance:none;
 }
 
+/* Permet de supprimer les deux fleches a l'interieur du champs input avec Firefox */
+
+.bloc-quantity input[type=number] {
+   appearance: textfield;
+   -webkit-appearance: textfield;
+   -moz-appearance: textfield;
+}
+
+#wpcf7-f502-p35-o1{
+   display: flex;
+   justify-content: center;
+}
+
+
 .form-commander{
    display: flex;
    justify-content: center;
+   width: 60%;
 }
 
 .bloc-commande{
    border-top: solid white 1px;
    border-bottom: solid white 1px;
    padding: 40px 0px 40px 0px;
+  
 }
 
-.bloc-commande h2 {
-   color: white;
-   text-transform: capitalize;
+.title-form {
+   color: white !important;
+   text-transform: capitalize !important;
 }
 
 .bloc-gout {
-    width: 192px;
+    width: 23%;
 }
 
 .bloc-quantity{
     display: flex;
+    width: 42%;
 }
 
 .quantity{
-    width: 51px !important;
+    width: 70% !important ;
    /* height: 56px;*/
     border: 0;
     border-radius: 5px 0px 0px 5px !important;
@@ -206,7 +226,7 @@ body * {
 }
 
 .button-ok{
-    width: 100px;
+    width: 52%;
     height: 56px;
     border: 0;
     border-radius: 5px;
@@ -227,11 +247,11 @@ body * {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 30%;
 }
 
 
 .button-quantity-1{
-    width: 31px;
     height: 100%;
     border: 0;
     border-radius: 0px 5px 0px 0px;
@@ -251,7 +271,6 @@ body * {
 }
 
 .button-quantity-2{
-    width: 31px;
     height: 100%;
     border: 0;
     border-radius: 0px 0px 5px 0px;
@@ -280,26 +299,27 @@ body * {
 .image-gout{
     background-repeat: no-repeat;
     height: 128px;
-    width: 192px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
 }
 
 .img-fraise{
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fond-fraise.png);
+   background-image: url('../../../uploads/2023/07/fond-fraise.png');
 }
 
 .img-pamplemousse{
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fond-pamplemousse.png);
+   background-image: url('../../../uploads/2023/07/fond-pamplemousse.png');
 }
 
 .img-framboise{
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fond-framboise.png);
+   background-image: url('../../../uploads/2023/07/fond-framboise.png');
 }
 
 .img-citron{
-   background-image: url(http://localhost:81/Planty/wp-content/uploads/2023/07/fond-citron.png);
+   background-image: url('../../../uploads/2023/07/fond-citron.png');
 }
 
 .title-label{
@@ -312,8 +332,63 @@ body * {
 
 .global-gouts{
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*gap: 25px;*/
     margin-top: 40px;
+}
+
+/* Partie 2 */
+
+.bloc-information-livraison{
+   display: flex;
+   margin-top: 40px;
+  /* justify-content: space-between;*/
+}
+
+.bloc-information {
+   border-right: solid white 1px;
+   padding-right: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.bloc-livraison {
+   padding-left: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.form-contact {
+   color: white;
+}
+
+.champ-text {
+   border-radius: 7px !important;
+   margin-top: 10px;
+}
+
+.form-commander .button-commander{
+   background-color: var(--color-button);
+   color: white;
+   border-radius: 5px;
+   font-size: 15px;
+   font-weight: 400;
+   padding-right: 58px;
+    padding-left: 58px;
+    margin-top: 40px;
+}
+
+.form-commander .button-commander:hover{
+   background-color: var(--main-bg-color);
+   color: white;
+}
+
+.bloc-button-commander{
+   justify-content: center;
+   display: grid;
 }
 
 
@@ -372,4 +447,54 @@ body * {
    .div-formulaire{
       background-image: none;
    }
+}
+
+/* Page Commander */
+
+@media (max-width: 1270px) {
+
+   .bloc-gout{
+      width: 48%;
+   }
+
+   .form-global{
+      width: 80%;
+   }
+
+   .img-framboise {
+      margin-top: 35px;
+   }
+
+   .img-citron {
+      margin-top: 35px;
+   }
+
+   .bloc-information-livraison {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .bloc-information, .bloc-livraison{
+   padding: 0px;
+   border: none;
+  }
+  .bloc-livraison{
+   margin-top: 40px;
+  }
+}
+
+@media (max-width: 830px) {
+
+   .bloc-gout{
+      width: 100%;
+   }
+
+   .img-pamplemousse {
+      margin-top: 35px;
+   }
+
+   .form-commander{
+      width: 80%;
+   }
+
 }
