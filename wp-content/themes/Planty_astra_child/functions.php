@@ -12,3 +12,16 @@ function theme_enqueue_styles(){
 // Action qui permet de supprimer les balises <p> dans le plugin contact form
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+// Action qui permet d'ajouter un lien admin sur le menu principal et hors-champs quand l'internaute est connecté à WP
+
+add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
+function add_extra_item_to_nav_menu( $items, $args ) {
+    if (is_user_logged_in() && ('primary' == $args->theme_location || 'mobile_menu' == $args->theme_location) ) {
+        $items .= '<li><a href="' . admin_url() . '" class="menu-link">Admin</a></li>';
+    }
+
+    return $items;
+}
+
